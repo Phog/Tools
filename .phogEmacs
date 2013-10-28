@@ -1,0 +1,18 @@
+(setq c-default-style "bsd" c-basic-offset 4)
+(setq-default indent-tabs-mode nil)
+(add-hook 'c-mode-common-hook (lambda () (setq indent-tabs-mode t)))
+
+(require 'whitespace)
+(setq-default whitespace-style '(trailing))
+(global-whitespace-mode 1)
+
+(require 'ido)
+(ido-mode t)
+
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-subtle-hacker)
+
+(set-default-font "DejaVu Sans Mono 13")
